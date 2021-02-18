@@ -64,7 +64,7 @@ export const Home: React.FC<homeProps> = ({ }) => {
         <div className="home">
             <Hero />
             {/* <AboutPreview /> */}
-            {/* <Mission /> */}
+            <Mission />
             <div >
                 <FadeInWhenVisible>
                     <Box />

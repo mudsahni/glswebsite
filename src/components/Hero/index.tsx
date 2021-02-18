@@ -23,7 +23,7 @@ export const Hero: React.FC<heroProps> = ({ }) => {
 
                     <motion.div animate={{ opacity: 1 }} transition={{ duration: 2, ease: 'easeInOut', delay: 2 }}>
                         <motion.div animate={{ y: [-30, 0, -30] }} transition={{ duration: 2, loop: Infinity, ease: 'easeInOut' }}>
-                            <Icon name="chevron down" size="big" color="teal" onClick={() => window.scrollTo(0, 1000)}></Icon>
+                            <Icon name="chevron down" size="big" color="teal" onClick={() => window.scrollTo(0, 1250)}></Icon>
                         </motion.div>
                     </motion.div>
                 </div>

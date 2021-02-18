@@ -9,7 +9,7 @@
     --secondary-background-color: rgba(246, 248, 231);
     --tertiary-background-color: #3D405B;
     --primary-component-color: #3D405B;
-    --secondary-component-color: #02C39A;
+    --secondary-component-color: rgba(246, 248, 231);
     --primary-text-color: #3D405B;
     --secondary-text-color: rgb(255, 255, 255);
 
@@ -27,7 +27,7 @@
     /* opacities */
     --primary-text-opacity: 1;
     --secondary-text-opacity: 0.8;
-
+    --tertiary-text-opacity: 0.6;
     /* padding */
     --page-padding-large: 1rem 7rem;
     --page-padding-small: 1rem 1rem;
@@ -148,7 +148,7 @@ h3 {
     font-weight: var(--paragraph-font-weight) !important;
     font-family: var(--primary-font-family) !important;
     letter-spacing: var(--letter-spacing) !important;
-    line-height: calc(var(--tertiary-font-size) + var(--line-height)) !important;
+    /* line-height: calc(var(--tertiary-font-size) + var(--line-height)) !important; */
 
 }
 
@@ -173,4 +173,31 @@ main i.teal.icon {
 input,
 textarea {
     max-width: 500px !important;
+}
+
+main a {
+    color: inherit !important;
+}
+
+main a:hover {
+    filter: contrast(2) !important;
+    -webkit-filter: contrast(2) !important;
+    text-decoration: underline;
+}
+
+main a:active {
+    filter: contrast(3) !important;
+    -webkit-filter: contrast(3) !important;
+    text-decoration: underline;
+
+}
+
+main a:focus {
+    filter: contrast(2) !important;
+    text-decoration: underline;
+    -webkit-filter: contrast(2) !important;
+}
+
+main i.grey.icon {
+    color: white !important;
 }

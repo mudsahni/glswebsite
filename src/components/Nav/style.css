@@ -8,6 +8,7 @@ nav {
     position: fixed;
     width: 100%;
     opacity: 0;
+    z-index: 99999;
 }
 
 .nav-left {
