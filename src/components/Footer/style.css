@@ -1,0 +1,57 @@
+.footer-contact-section {
+    height: 80vh;
+    background: url('../../assets/contact-footer.svg') no-repeat top center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer {
+    height: 50vh;
+    background: url('../../assets/footerBottom.svg') no-repeat top center;
+    background-size: cover;
+    margin-top: -50px;
+}
+
+.contact-us-footer {
+    height: 10vh;
+    width: 100%;
+    margin-top: 10%;
+
+}
+
+.footer,
+.footer-contact-section {
+    padding: var(--page-padding-large);
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .footer,
+    .footer-contact-section {
+        padding: var(--page-padding-small);
+    }
+
+
+}
+
+.contact-info-footer {
+    opacity: 0.8;
+}
+
+.contact-info-footer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-footer>p {
+    width: 80%;
+}
+
+.contact-info-footer>div>span {
+    margin-bottom: 12px;
+    color: var(--primary-text-color);
+    font-size: var(--paragraph-font-size);
+}

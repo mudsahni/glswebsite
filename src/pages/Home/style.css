@@ -1,0 +1,19 @@
+.test {
+    height: 100vh;
+}
+
+.home {}
+
+.test {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    /* opacity: 0; */
+}
+
+.test-content {
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}

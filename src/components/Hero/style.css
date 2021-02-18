@@ -1,0 +1,77 @@
+.hero {
+    background: url('../../assets/wheatFields2.svg') no-repeat center center;
+    /* background-size: contain;
+    min-height: 100vh; */
+    /* padding-bottom: 500px; */
+    /* background-position-x: 300px;
+    background-position-y: -100px; */
+    height: 130vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--page-padding-large);
+
+}
+
+.hero-content {
+    height: 70%;
+    width: 550px !important;
+    text-align: center;
+    /* letter-spacing: 1px; */
+}
+
+.hero-content>div {
+    /* color: #3D405B;
+    font-size: 32px;
+    font-weight: 400; */
+    /* line-height: 42px; */
+    padding: 12px;
+    overflow: hidden;
+    /* letter-spacing: 0.3px; */
+}
+
+
+.hero-content>div>h3 {}
+
+.hero-content>div>p {}
+
+
+.hero-content>div>p {
+    /* opacity: 0.8; */
+
+}
+
+.ui.button {
+    margin-right: 12px !important;
+}
+
+.hero-buttons {}
+
+.hero-buttons>.ui.button:first-child {
+    /* opacity: 0; */
+
+}
+
+.hero-buttons>.ui.button:last-child {
+    /* opacity: 0; */
+
+}
+
+.hero-section i.teal.icon {
+    color: var(--primary-text-color) !important;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.hero-content>div:last-child {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: var(--page-padding-small);
+    }
+
+
+}

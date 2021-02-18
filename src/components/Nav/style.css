@@ -1,0 +1,125 @@
+nav {
+    padding: var(--page-padding-large);
+    height: var(--nav-bar-min-height);
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.nav-left>.nav-links {
+    margin-left: var(--nav-links-padding);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-links li {
+    padding-left: var(--nav-links-padding);
+    font-size: var(--paragraph-font-size);
+    color: var(--primary-text-color);
+    font-weight: var(--paragraph-font-weight);
+
+}
+
+
+/* .nav-links>li>span:hover:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10%;
+    height: 3px;
+    background-color: pink;
+    /* bottom: 0; */
+/* left: 0; */
+/* top: 46px; */
+
+.hamburger {
+    display: none;
+    /* float: right;
+    margin-left: auto; */
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: var(--page-padding-small);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+}
+
+
+.nav-links .ui.basic.teal.button,
+.nav-links .ui.basic.teal.buttons .button {
+    box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
+    color: var(--primary-component-color) !important;
+    letter-spacing: var(--letter-spacing) !important;
+    font-weight: var(--paragraph-font-weight) !important;
+}
+
+.nav-links .ui.basic.teal.button:hover,
+.nav-links .ui.basic.teal.buttons .button:hover {
+    box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
+    color: var(--primary-component-color) !important;
+    letter-spacing: var(--letter-spacing) !important;
+    font-weight: var(--paragraph-font-weight) !important;
+    filter: contrast(1.1) !important;
+    -webkit-filter: contrast(1.1) !important;
+}
+
+.nav-links .ui.basic.teal.button:active,
+.nav-links .ui.basic.teal.buttons .button:active {
+    box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
+    color: var(--primary-component-color) !important;
+    letter-spacing: var(--letter-spacing) !important;
+    font-weight: var(--paragraph-font-weight) !important;
+    filter: contrast(1.3) !important;
+    -webkit-filter: contrast(1.3) !important;
+    transform: scale(0.95, 0.95) !important;
+    -webkit-transform: scale(0.95, 0.95) !important;
+    -moz-transform: scale(0.95, 0.95) !important;
+    -ms-transform: scale(0.95, 0.95) !important;
+    -o-transform: scale(0.95, 0.95) !important;
+}
+
+.nav-links .ui.basic.teal.button:visited,
+.nav-links .ui.basic.teal.buttons .button:visited {
+    box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
+    color: var(--primary-component-color) !important;
+    letter-spacing: var(--letter-spacing) !important;
+    font-weight: var(--paragraph-font-weight) !important;
+    filter: contrast(1.3) !important;
+    -webkit-filter: contrast(1.3) !important;
+}
+
+.nav-links .ui.basic.teal.button:focus,
+.nav-links .ui.basic.teal.buttons .button:focus {
+    box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
+    color: var(--primary-component-color) !important;
+    letter-spacing: var(--letter-spacing) !important;
+    font-weight: var(--paragraph-font-weight) !important;
+    filter: contrast(1.3) !important;
+    -webkit-filter: contrast(1.3) !important;
+}
