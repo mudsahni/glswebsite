@@ -10,6 +10,7 @@ import { useInView } from "react-intersection-observer"; // 1.9K gzipped
 
 import './style.css'
 import { Footer } from '../../components/Footer';
+import { footerContent } from '../../content/footer';
 interface homeProps {
 
 }
@@ -86,7 +87,7 @@ export const Home: React.FC<homeProps> = ({ }) => {
 
             </div>
 
-            <Footer />
+            <Footer footerContent={footerContent} />
         </div>
     );
 }

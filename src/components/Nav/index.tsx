@@ -5,7 +5,7 @@ import { Button, Image } from 'semantic-ui-react';
 import './style.css'
 import Hamburger from '../../assets/hamburger.svg'
 import { motion, useTransform, useViewportScroll, useSpring } from "framer-motion";
-
+import Wheat from '../../assets/wheat.svg'
 interface navProps {
 
 }
@@ -40,8 +40,9 @@ export const Nav: React.FC<navProps> = ({ }) => {
                 ease: 'easeInOut',
             }}>
                 <div className="nav-left">
-                    <h3 id='logo'>gls.</h3>
-
+                    <div><Image src={Wheat} width={30}></Image>
+                        <h3 id='logo'>gls.</h3>
+                    </div>
                     <ul className="nav-links">
                         <li><span>About</span></li>
                         <li><span>Products</span></li>
@@ -50,7 +51,7 @@ export const Nav: React.FC<navProps> = ({ }) => {
                 </div>
                 <div className="nav-right">
                     <ul className="nav-links">
-                        <li><Button basic color="teal">Contact</Button></li>
+                        <li><Button basic color="teal" onClick={() => window.location.href = "#contact"}>Contact</Button></li>
 
                     </ul>
                 </div>

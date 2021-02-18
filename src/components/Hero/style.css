@@ -59,7 +59,6 @@
 }
 
 .hero-section i.teal.icon {
-    color: var(--primary-text-color) !important;
     margin-top: 100px;
     cursor: pointer;
 }

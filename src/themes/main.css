@@ -11,7 +11,7 @@
     --primary-component-color: #3D405B;
     --secondary-component-color: #02C39A;
     --primary-text-color: #3D405B;
-    --secondary-text-color: rgb(246, 246, 246);
+    --secondary-text-color: rgb(255, 255, 255);
 
     /* font sizes */
     --primary-font-size: 4em;
@@ -84,26 +84,28 @@
     -o-transform: scale(0.95, 0.95) !important;
 }
 
-.hero-buttons>.ui.basic.teal.button,
-.hero-buttons>.ui.basic.teal.buttons .button {
+main .ui.basic.teal.button,
+main .ui.basic.teal.buttons .button {
     box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
     color: var(--primary-component-color) !important;
     letter-spacing: var(--letter-spacing) !important;
     font-weight: var(--paragraph-font-weight) !important;
 }
 
-.hero-buttons>.ui.basic.teal.button:hover,
-.hero-buttons>.ui.basic.teal.buttons .button:hover {
+main .ui.basic.teal.button:hover,
+main .ui.basic.teal.buttons .button:hover {
     box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
     color: var(--primary-component-color) !important;
     letter-spacing: var(--letter-spacing) !important;
     font-weight: var(--paragraph-font-weight) !important;
     filter: contrast(1.1) !important;
     -webkit-filter: contrast(1.1) !important;
+    /* background-color: var(--primary-component-color) !important;
+    color: white !important; */
 }
 
-.hero-buttons>.ui.basic.teal.button:active,
-.hero-buttons>.ui.basic.teal.buttons .button:active {
+main .ui.basic.teal.button:active,
+main .ui.basic.teal.buttons .button:active {
     box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
     color: var(--primary-component-color) !important;
     letter-spacing: var(--letter-spacing) !important;
@@ -117,8 +119,8 @@
     -o-transform: scale(0.95, 0.95) !important;
 }
 
-.hero-buttons>.ui.basic.teal.button:visited,
-.hero-buttons>.ui.basic.teal.buttons .button:visited {
+main .ui.basic.teal.button:visited,
+main .ui.basic.teal.buttons .button:visited {
     box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
     color: var(--primary-component-color) !important;
     letter-spacing: var(--letter-spacing) !important;
@@ -127,8 +129,8 @@
     -webkit-filter: contrast(1.3) !important;
 }
 
-.hero-buttons>.ui.basic.teal.button:focus,
-.hero-buttons>.ui.basic.teal.buttons .button:focus {
+main .ui.basic.teal.button:focus,
+main .ui.basic.teal.buttons .button:focus {
     box-shadow: 0 0 0 1px var(--primary-component-color) inset !important;
     color: var(--primary-component-color) !important;
     letter-spacing: var(--letter-spacing) !important;
@@ -161,4 +163,14 @@ p {
 
 
 
+}
+
+main i.teal.icon {
+    color: var(--primary-text-color) !important;
+
+}
+
+input,
+textarea {
+    max-width: 500px !important;
 }
