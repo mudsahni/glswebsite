@@ -1,92 +1,145 @@
 import { motion } from 'framer-motion';
 import * as React from 'react'
-import { Button, Grid, Image } from 'semantic-ui-react';
+import { Button, Grid, Icon, Image, Statistic } from 'semantic-ui-react';
 import './style.css'
 import Research from '../../assets/biology.svg'
 import Industry from '../../assets/industry.svg'
 import Sales from '../../assets/sales.svg'
+import { FadeInWhenVisible } from '../FadeInWhenVisible';
+import defaultSVG from '../../assets/researchPlant.svg'
+import researchSVG from '../../assets/grainOverhead.svg'
 
 interface missionProps {
-
+    mission: { title: string, description: string };
 }
 
-export const Mission: React.FC<missionProps> = ({ }) => {
 
+export const Mission: React.FC<missionProps> = ({ mission }) => {
+    const [domainBackground, setDomainBackground] = React.useState<string>(defaultSVG)
 
     return (
-        <section>
-            <div className="mission">
-                <Grid stackable>
-                    <Grid.Row>
-                        <Grid.Column width={16}>
-                            <div className="mission-text">
-                                <h3>Improving farming for a better tomorrow</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut reprehenderit repellat aliquid sapiente consequuntur. Voluptatum aut nulla numquam dolor quidem dolore laudantium porro temporibus nihil, dicta voluptatibus impedit eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, consequatur facilis. Cumque doloribus sequi nesciunt provident cupiditate animi fuga magnam quia. Consectetur ipsum molestias fugit, hic nemo officiis sint quisquam.</p>
-                            </div>
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid.Column width={8}>
-                            <motion.div className="domain-svg"
-                            // animate={{
-                            //     scale: [0.1, 0.3, 0.5, 0.7, 1, 1, 1.2, 1.4, 1, 1],
-                            //     rotate: [0, 0, 0, 270, 270, 270, 0, 0, 0, 0]
-                            // }}
-                            // transition={{
-                            //     duration: 5,
-                            //     ease: 'easeInOut',
-                            //     times: [0, 0, 0.2, 0.2, 0.5, 0.5, 0.8, 0.8, 1, 1],
-                            //     loop: Infinity,
-                            //     repeatDelay: 1
-                            // }}
-                            >
+        <React.Fragment>
+            <section>
+                <div className="mission">
+                    <Grid stackable>
+                        <Grid.Row>
+                            <Grid.Column width={16}>
+                                <div className="mission-text">
+                                    <FadeInWhenVisible duration={2} stagger={0}>
+                                        <h3>{mission.title}</h3>
+                                    </FadeInWhenVisible >
+                                    <FadeInWhenVisible duration={2} stagger={0}>
 
-                            </motion.div>
-                        </Grid.Column>
-                        <Grid.Column width={8}>
-                            <div className="domain-text">
-                                <h3>Get ahead of the curve</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi architecto praesentium nemo necessitatibus unde minima hic optio pariatur numquam, veritatis ipsa quibusdam quisquam placeat aspernatur quo, aut vel dolores a?
-                            </p>
-                                <div>
-                                    <Button color='teal'>Read more</Button>
+                                        <p>{mission.description}</p>
+                                    </FadeInWhenVisible>
+
                                 </div>
-                            </div>
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row columns={3}>
-                        <Grid.Column>
-                            <div className="domain-box domain-box-active">
-                                <Image src={Research} width={60}></Image>
-                                <span>Research</span>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit temporibus quae quo ad! Illo, cupiditate voluptates esse impedit amet adipisci eligendi eveniet porro velit similique perspiciatis non molestias, corrupti ipsum!</p>
-                            </div>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <div className="domain-box">
-                                <Image src={Industry} width={60}></Image>
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column width={16}>
+                                <div className="company-statistics">
+                                    <div className="company-statistic">
+                                        <div className="statistic-icon">
+                                            {/* <Icon name="calendar alternate outline" size="huge" /> */}
+                                        </div>
+                                        <div className="statistic-content">
+                                            <div className="statistic-number">
+                                                {`>`}20
+                                        </div>
+                                            <div className='statistic-text'>
+                                                Years of Service
+                                        </div>
+                                        </div>
 
-                                <span>Manufacturing</span>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit temporibus quae quo ad! Illo, cupiditate voluptates esse impedit amet adipisci eligendi eveniet porro velit similique perspiciatis non molestias, corrupti ipsum!</p>
+                                    </div>
+                                    <div className="company-statistic">
+                                        <div className="statistic-content">
+                                            <div className="statistic-number">
+                                                <Icon name="trophy"></Icon>
+                                                <span>1</span>
+                                            </div>
+                                            <div className='statistic-text'>
+                                                Guiness World Record
+                                        </div>
+                                        </div>
 
-                            </div>
+                                    </div>
+                                    <div className="company-statistic">
+                                        <div className="statistic-icon">
+                                            {/* <Icon name="calendar alternate outline" size="huge" /> */}
+                                        </div>
+                                        <div className="statistic-content">
+                                            <div className="statistic-number">
+                                                {`>`}20
+                                        </div>
+                                            <div className='statistic-text'>
+                                                Years of Service
+                                        </div>
+                                        </div>
 
-                        </Grid.Column>
-                        <Grid.Column>
-                            <div className="domain-box">
-                                <Image src={Sales} width={60}></Image>
+                                    </div>
 
-                                <span>Sales & Marketing</span>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit temporibus quae quo ad! Illo, cupiditate voluptates esse impedit amet adipisci eligendi eveniet porro velit similique perspiciatis non molestias, corrupti ipsum!</p>
+                                </div>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </div>
+            </section>
+            <section className="domain-section">
+                <div className="domain">
+                    <Grid stackable>
+                        <Grid.Row>
+                            <Grid.Column width={8}>
+                                <div>
+                                    <Image src={domainBackground} width={500} />
+                                </div>
+                            </Grid.Column>
+                            <Grid.Column width={8}>
+                                <div className="domain-text">
+                                    <h3>Get ahead of the curve</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi architecto praesentium nemo necessitatibus unde minima hic optio pariatur numquam, veritatis ipsa quibusdam quisquam placeat aspernatur quo, aut vel dolores a?
+                            </p>
+                                    <div>
+                                        <Button color='teal'>Read more</Button>
+                                    </div>
+                                </div>
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row columns={3}>
+                            <Grid.Column>
+                                <div className="domain-box" onClick={() => setDomainBackground(researchSVG)}>
+                                    <Image src={Research} width={60}></Image>
+                                    <span>Research</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit temporibus quae quo ad! Illo, cupiditate voluptates esse impedit amet adipisci eligendi eveniet porro velit similique perspiciatis non molestias, corrupti ipsum!</p>
+                                </div>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <div className="domain-box">
+                                    <Image src={Industry} width={60}></Image>
 
-                            </div>
+                                    <span>Manufacturing</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit temporibus quae quo ad! Illo, cupiditate voluptates esse impedit amet adipisci eligendi eveniet porro velit similique perspiciatis non molestias, corrupti ipsum!</p>
 
-                        </Grid.Column>
+                                </div>
 
-                    </Grid.Row>
-                </Grid>
-            </div>
-        </section>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <div className="domain-box">
+                                    <Image src={Sales} width={60}></Image>
+
+                                    <span>Sales & Marketing</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit temporibus quae quo ad! Illo, cupiditate voluptates esse impedit amet adipisci eligendi eveniet porro velit similique perspiciatis non molestias, corrupti ipsum!</p>
+
+                                </div>
+
+                            </Grid.Column>
+
+                        </Grid.Row>
+                    </Grid>
+                </div>
+            </section>
+        </React.Fragment>
     );
 }

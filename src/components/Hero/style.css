@@ -1,11 +1,12 @@
 .hero {
     background: url('../../assets/wheatFields2.svg') no-repeat center center;
+    background-color: white;
     /* background-size: contain;
     min-height: 100vh; */
     /* padding-bottom: 500px; */
     /* background-position-x: 300px;
     background-position-y: -100px; */
-    height: 130vh;
+    height: 125vh;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -28,13 +29,19 @@
     /* line-height: 42px; */
     padding: 12px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     /* letter-spacing: 0.3px; */
 }
 
 
 .hero-content>div>h3 {}
 
-.hero-content>div>p {}
+.hero-content>div>p {
+    margin-top: 1em;
+}
 
 
 .hero-content>div>p {
@@ -73,4 +80,12 @@
     }
 
 
+}
+
+.hero h3 {
+    color: var(--primary-text-color) !important;
+}
+
+.hero p {
+    color: var(--primary-text-color) !important;
 }

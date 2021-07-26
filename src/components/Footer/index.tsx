@@ -14,8 +14,8 @@ export const Footer: React.FC<footerProps> = ({ footerContent }) => {
                     <div className="contact-us-footer">
                         <Grid stackable>
 
-                            <Grid.Row>
-                                <Grid.Column width={8}>
+                            <Grid.Row columns={2}>
+                                <Grid.Column>
                                     <div className="contact-info-footer">
                                         <h3>{footerContent.contactSection.left.title}</h3>
 
@@ -23,10 +23,12 @@ export const Footer: React.FC<footerProps> = ({ footerContent }) => {
                                         {footerContent.contactSection.left.extras}
                                     </div>
                                 </Grid.Column>
-                                <Grid.Column width={8}>
-                                    <div className="contact-form-footer">
-                                        {footerContent.contactSection.right.extras}
+                                <Grid.Column>
+                                    <div className="align-end-container">
+                                        <div className="contact-form-footer">
+                                            {footerContent.contactSection.right.extras}
 
+                                        </div>
                                     </div>
                                 </Grid.Column>
 
@@ -37,8 +39,8 @@ export const Footer: React.FC<footerProps> = ({ footerContent }) => {
                 <div className="footer">
                     <div className='footer-section'>
                         <Grid stackable>
-                            <Grid.Row>
-                                <Grid.Column width={3}>
+                            <Grid.Row columns={4}>
+                                <Grid.Column >
                                     <div className="footer-links">
                                         <span>Company</span>
                                         <span>About</span>
@@ -46,7 +48,7 @@ export const Footer: React.FC<footerProps> = ({ footerContent }) => {
                                         <span>Team</span>
                                     </div>
                                 </Grid.Column>
-                                <Grid.Column width={3}>
+                                <Grid.Column >
                                     <div className="footer-links">
                                         <span>Products & Services</span>
                                         <span>Agriculture</span>
@@ -55,7 +57,7 @@ export const Footer: React.FC<footerProps> = ({ footerContent }) => {
                                     </div>
 
                                 </Grid.Column>
-                                <Grid.Column width={3}>
+                                <Grid.Column >
                                     <div className="footer-links">
                                         <span>Quick Links</span>
                                         <span>Sitemap</span>
@@ -65,19 +67,20 @@ export const Footer: React.FC<footerProps> = ({ footerContent }) => {
                                     </div>
 
                                 </Grid.Column>
-                                <Grid.Column width={4}>
-                                    <div className="footer-links">
+                                <Grid.Column >
+                                    <div className="align-end-container">
+                                        <div className="footer-links">
 
-                                        <span>Location</span>
-                                        <span>9, Krishna Estate, Gorwa, Baroda - 390 016. Gujarat - India</span>
-                                        <div className="social-media-links">
-                                            <Icon name='facebook' color="grey" />
-                                            <Icon name='linkedin' color="grey" />
-                                            <Icon name='amazon' color="grey" />
+                                            <span>Location</span>
+                                            <span>9, Krishna Estate, Gorwa, Baroda - 390 016. Gujarat - India</span>
+                                            <div className="social-media-links">
+                                                <Icon name='facebook' color="grey" />
+                                                <Icon name='linkedin' color="grey" />
+                                                <Icon name='amazon' color="grey" />
 
+                                            </div>
                                         </div>
                                     </div>
-
                                 </Grid.Column>
 
                             </Grid.Row>

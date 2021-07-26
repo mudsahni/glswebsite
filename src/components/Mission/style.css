@@ -1,14 +1,40 @@
 .mission {
-    height: 100vh;
+    /* height: 50vh; */
     width: 100vw;
     padding: var(--page-padding-large);
 
 }
 
+.domain {
+    /* height: 50vh; */
+    width: 100vw;
+    padding: 5em;
+
+}
+
+.domain-section {
+    background-color: var(--secondary-background-color);
+}
+
 .domain-svg {
+    background-size: contain;
+    height: 50vh;
+    width: 100%;
+
+}
+
+.default-domain-svg {
     background: url('../../assets/researchPlant.svg') no-repeat center center;
     background-size: contain;
     height: 50vh;
+    width: 100%;
+
+}
+
+.research-domain-svg {
+    background: url('../../assets/grainOverhead.svg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
     width: 100%;
 
 }
@@ -30,10 +56,14 @@
     .mission {
         padding: var(--page-padding-small);
     }
+
+    .domain {
+        padding: var(--page-padding-small);
+
+    }
 }
 
 .domain-box {
-
     width: 100%;
     border-radius: var(--border-radius);
     -webkit-border-radius: var(--border-radius);
@@ -43,16 +73,39 @@
     margin-top: 4em;
     padding: var(--component-padding);
     color: var(--primary-text-color);
-    border: 2px dashed var(--primary-component-color);
     cursor: pointer;
+    /*background: rgba(255, 255, 255, 0.4);
+    */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 1) 50%) right;
+    background-size: 200%;
+    transition: all .5s ease-out;
+    display: inline-block;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
 }
 
-.domain-box:hover {
-    background-color: var(--secondary-background-color);
+
+.domain .domain-box:hover {
+    /* background-color: rgba(255, 255, 255, 1); */
+    background-position: left;
+
+
 }
+
+/* .domain .domain-box:hover>p {
+    color: var(--primary-text-color) !important;
+
+} */
 
 .domain-box-active {
-    background-color: var(--secondary-background-color);
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--primary-text-color) !important;
+}
+
+.mission .domain-box-active>p {
+    color: var(--primary-text-color) !important;
 
 }
 
@@ -72,4 +125,123 @@
 
 .mission-text {
     margin-bottom: 4em;
+}
+
+.mission-text>div>h3 {
+    margin-bottom: 1em;
+}
+
+
+.mission-text>div>p {
+    opacity: 0.8;
+}
+
+
+
+
+rect {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.blobs {
+    -webkit-filter: url("#goo");
+    filter: url("#goo");
+}
+
+.blob {
+    fill: white;
+}
+
+.mission>div:first-child {
+    height: 100vh;
+    width: 100%;
+}
+
+#loader {
+    display: inline-block;
+    position: relative;
+    width: 800px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -400px;
+}
+
+.mission h3 {
+    color: var(--secondary-text-color) !important;
+
+}
+
+.mission p {
+    color: var(--secondary-text-color) !important;
+
+}
+
+.domain h3 {
+    color: var(--primary-text-color) !important;
+
+}
+
+.domain p {
+    color: var(--primary-text-color) !important;
+
+}
+
+.company-statistic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.statistic-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-text-color);
+
+}
+
+.statistic-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistic-number>i {
+    font-weight: var(--tertiary-font-weight) !important;
+    font-size: var(--secondary-font-size) !important;
+
+}
+
+.statistic-number>span {
+    font-weight: var(--tertiary-font-weight);
+    font-size: var(--secondary-font-size);
+    margin-left: 0.32em;
+}
+
+.statistic-text {
+    font-size: var(--paragraph-font-size);
+    margin-top: 1em;
+}
+
+.statistic-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 1em;
+}
+
+.company-statistics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }

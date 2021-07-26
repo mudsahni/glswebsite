@@ -16,9 +16,9 @@ export const footerContent = {
             description: "",
             extras: <Form>
 
-                <Form.Input fluid placeholder="Name"></Form.Input>
-                <Form.Input fluid placeholder="Email"></Form.Input>
-                <Form.TextArea fluid placeholder='...' />
+                <Form.Input placeholder="Name"></Form.Input>
+                <Form.Input placeholder="Email"></Form.Input>
+                <Form.TextArea placeholder='...' />
                 <Form.Button basic color="teal">Submit</Form.Button>
 
             </Form>

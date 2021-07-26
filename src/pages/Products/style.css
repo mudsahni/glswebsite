@@ -1,0 +1,4 @@
+.pseudo-nav {
+    height: var(--nav-bar-min-height);
+    background-color: var(--secondary-background-color);
+}

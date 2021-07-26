@@ -11,18 +11,24 @@ import { useInView } from "react-intersection-observer"; // 1.9K gzipped
 import './style.css'
 import { Footer } from '../../components/Footer';
 import { footerContent } from '../../content/footer';
+import { missionContent } from '../../content/mission';
+import { Logo } from '../../components/Logo';
 interface homeProps {
-
+    runLogoAnimation: boolean;
 }
 interface FadeInWhenVisibleProps {
 
 }
 
 const FadeInWhenVisible: React.FC<FadeInWhenVisibleProps> = ({ children }) => {
+
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
     React.useEffect(() => {
+
+
+
         if (inView) {
             controls.start("visible");
         }
@@ -58,14 +64,32 @@ const Box = () => {
     );
 }
 
-export const Home: React.FC<homeProps> = ({ }) => {
+export const Home: React.FC<homeProps> = ({ runLogoAnimation }) => {
+    const [t, setT] = React.useState<number>(1)
+
+    React.useEffect(() => {
+        setT(10)
+    }, [])
 
     return (
-        <div className="home">
-            <Hero />
-            {/* <AboutPreview /> */}
-            <Mission />
-            <div >
+        <React.Fragment>
+            {t === 10 ?
+                <div style={{ position: 'absolute', height: '100vh', width: '100vw', display: 'flex', alignItems: "center", justifyContent: "center" }}>
+                    <motion.div style={{ overflow: 'hidden', y: '-300px', position: 'absolute' }}>
+                        <Logo size={100} enter={false} />
+
+                    </motion.div>
+                </div> : <div></div>
+            }
+
+
+
+
+            <motion.div className="home" initial={t === 10 ? { opacity: 0 } : { opacity: 100 }} animate={t === 10 ? { opacity: 100, transition: { duration: 3, delay: t === 10 ? 6 : 0 } } : { opacity: 100 }}>
+                <Hero runLogoAnimation={runLogoAnimation} />
+                {/* <AboutPreview /> */}
+                <Mission mission={missionContent} />
+                {/* <div >
                 <FadeInWhenVisible>
                     <Box />
                 </FadeInWhenVisible>
@@ -85,9 +109,12 @@ export const Home: React.FC<homeProps> = ({ }) => {
                     <Box />
                 </FadeInWhenVisible>
 
-            </div>
+            </div> */}
 
-            <Footer footerContent={footerContent} />
-        </div>
+
+
+            </motion.div>
+        </React.Fragment>
+
     );
 }

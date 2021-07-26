@@ -25,9 +25,29 @@
 .contact-form-footer {
     opacity: 0.8;
     margin-top: 30px;
+    width: 80%;
     /* width: 60%; */
     /* float: right;
     margin-left: auto */
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contact-form-footer {
+        opacity: 0.8;
+        margin-top: 30px;
+        width: 100%;
+        /* width: 60%; */
+        /* float: right;
+    margin-left: auto */
+    }
+
+}
+
+.contact-form-footer>.ui.form,
+.ui.form>.field,
+.ui.form>.field>.ui.input {
+    width: 100% !important;
 }
 
 .footer,
@@ -101,6 +121,15 @@
 .footer-links {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.align-end-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+
 }
 
 .footer-links>span {
@@ -148,5 +177,15 @@
 .company-name-footer>span>em {
     font-size: 2.5rem;
     font-weight: var(--secondary-font-weight);
+
+}
+
+footer h3 {
+    color: var(--primary-text-color) !important;
+
+}
+
+footer p {
+    color: var(--primary-text-color) !important;
 
 }
